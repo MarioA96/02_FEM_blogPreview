@@ -1,0 +1,39 @@
+@layer reset, base, tokens, recipes, utilities;
+
+
+@font-face {
+    font-family: 'Figtree Italic Variable';
+    src: url('/assets/fonts/Figtree-Italic-VariableFont_wght.ttf');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Figtree Variable';
+    src: url('/assets/fonts/Figtree-VariableFont_wght.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Figtree ExtraBold';
+    src: url('/assets/fonts/static/Figtree-ExtraBold.ttf');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Figtree SemiBold';
+    src: url('/assets/fonts/static/Figtree-SemiBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-figtree-italic-variable: 'Figtree Italic Variable', sans-serif;
+    --font-figtree-variable: 'Figtree Variable', sans-serif;
+    --font-figtree-extrabold: 'Figtree ExtraBold', sans-serif;
+    --font-figtree-semibold: 'Figtree SemiBold', sans-serif;
+}
