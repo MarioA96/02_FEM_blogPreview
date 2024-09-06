@@ -1,0 +1,27 @@
+---
+import { css } from '../../styled-system/css';
+import { container } from '../../styled-system/patterns';
+import '../index.css';
+---
+
+<html lang="en" class={css({ height: '100%' })}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Blog Preview</title>
+	</head>
+	<body 
+		class={
+			css({
+				display: 'flex',
+				flexDirection: 'column', 
+				minHeight: '100%',
+				backgroundColor: 'hsl(47, 88%, 63%)'
+			})
+		}
+	>
+		<slot class={container({})}/>
+	</body>
+</html>
