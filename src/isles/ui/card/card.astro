@@ -1,0 +1,41 @@
+---
+import { css } from "../../../../styled-system/css";
+
+import CardHeroImage from "./card_heroImage.astro";
+import CardHeader from "./card_header.astro";
+import CardBody from "./card_body.astro";
+import CardFooter from "./card_footer.astro";
+---
+
+<div id="card_box" role="article" 
+        class={
+            css({
+                flexDirection: 'column',
+                marginTop: {
+                    xsm: '-10%'
+                },
+                width: {
+                    xsm: '80%'
+                },
+                height: {
+                    xsm: '60%'
+                },
+                borderRadius: '15px',
+                border: '2px solid black',
+                boxShadow: '8px 8px 0px 0px rgba(0,0,0,1)' ,
+                backgroundColor: 'white'
+            })
+        }
+>
+        <CardHeroImage 
+            imgSrc="/assets/images/illustration-article.svg"
+            class={css({ display: 'flex' })}
+        />
+        <CardHeader 
+            badge="Learning"
+            date="21 Dec 2023"
+            author="Greg Hooper"
+        />
+        <CardBody />
+        <CardFooter />
+</div>
