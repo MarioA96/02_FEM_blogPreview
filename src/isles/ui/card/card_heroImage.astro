@@ -1,0 +1,25 @@
+---
+import { css } from "../../../../styled-system/css";
+
+const { imgSrc } = Astro.props;
+---
+
+<div role="banner" 
+    class={
+        css({ 
+            marginTop:{ xsm: '5%' }, 
+            marginLeft:{ xsm: '5%' }, 
+            width: '100%' 
+        })
+    }
+>
+    <img src={ imgSrc } alt="image-banner" 
+        class={
+            css({ 
+                width: '90%', 
+                height: '100%',
+                borderRadius: '10px',
+            })
+        } 
+    />
+</div>
