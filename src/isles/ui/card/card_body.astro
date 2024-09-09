@@ -1,0 +1,48 @@
+---
+import { css } from "../../../../styled-system/css";
+
+interface Content {
+    title: string;
+    description: string;
+}
+
+const { content }: { content: Content } = Astro.props as { content: Content };
+---
+
+<div role="main"
+    class={
+        css({
+            display: 'flex',
+            flexDirection: 'column',
+            width: '98%'
+        })
+    }
+>
+
+    <span 
+        class={
+            css({
+                fontFamily: 'figtree_extrabold',
+                fontSize: '20px',
+                margin: '0px 0px 10px 15px',
+            })
+        }
+    >
+        {content.title}
+    </span>
+
+    <span
+        class={
+            css({
+                fontFamily: 'figtree_variable',
+                fontSize: '14px',
+                color: 'hsl(0, 0%, 50%)',
+                margin: '0px 0px 10px 15px',
+            })
+        }
+    >
+        {content.description}
+    </span>
+    
+
+</div>

@@ -1,0 +1,34 @@
+---
+const { avatarSrc, author } = Astro.props as { avatarSrc: string, author: string };
+
+import { css } from "../../../../styled-system/css";
+---
+
+<div id="card_footer_box" role="complementary"
+        class={
+            css({
+                display: 'flex',
+                flexDirection: 'row',
+                width: '100%',
+                margin: 'auto 0px 10px 15px',
+            })
+        }
+>
+
+    <img src={avatarSrc} alt="author-avatar" width="11%" height="10%">
+
+    <span id="footer_author_box"
+            class={
+                css({
+                    display: 'flex',
+                    fontFamily: 'figtree_extrabold',
+                    fontSize: '13px',
+                    color: 'hsl(0, 0%, 7%)',
+                    margin: '5px 0px 10px 10px',
+                })
+            }
+    >
+        {author}
+    </span>
+    
+</div>
