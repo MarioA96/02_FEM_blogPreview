@@ -5,6 +5,11 @@ import CardHeroImage from "./card_heroImage.astro";
 import CardHeader from "./card_header.astro";
 import CardBody from "./card_body.astro";
 import CardFooter from "./card_footer.astro";
+
+const initialContent = {
+    title: 'HTML & CSS foundations',
+    description: 'These lenguages are the backbone of every website, define structure, content and presentation.',
+}
 ---
 
 <div id="card_box" role="article" 
@@ -12,13 +17,20 @@ import CardFooter from "./card_footer.astro";
             css({
                 flexDirection: 'column',
                 marginTop: {
-                    xsm: '-10%'
+                    xsm: '-10%',
+                    sm: '-5%',
+                    lg: '0%',
+                    xl: '0%'
                 },
                 width: {
-                    xsm: '80%'
+                    xsm: '80%',
+                    sm: '50%',
+                    lg: '28%',
+                    xl: '22%'
                 },
                 height: {
-                    xsm: '60%'
+                    xsm: '60%',
+                    sm: 'fit-content'
                 },
                 borderRadius: '15px',
                 border: '2px solid black',
@@ -34,8 +46,12 @@ import CardFooter from "./card_footer.astro";
         <CardHeader 
             badge="Learning"
             date="21 Dec 2023"
+        />
+        <CardBody 
+            content={initialContent}
+        />
+        <CardFooter 
+            avatarSrc="/assets/images/image-avatar.webp"
             author="Greg Hooper"
         />
-        <CardBody />
-        <CardFooter />
 </div>
