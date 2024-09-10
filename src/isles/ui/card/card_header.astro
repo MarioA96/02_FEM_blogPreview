@@ -1,0 +1,46 @@
+---
+import { css } from "../../../../styled-system/css";
+
+const { badge, date } = Astro.props;
+---
+
+<div id="card_header_box" role="region"
+        class={
+            css({
+                display: 'flex',
+                flexDirection: 'column',
+            })
+        }
+>
+        
+        <div id="card_badge_box" role="cell"
+            class={
+                css({
+                    display: 'flex',
+                    width: 'fit-content',
+                    margin: '15px 0px 10px 15px',
+                    padding: '3px 8px 3px 8px',
+                    backgroundColor: 'hsl(47, 88%, 63%)',
+                    borderRadius: '5px',
+                    fontFamily: 'figtree_extrabold',
+                    fontSize: '13px',
+                })
+            }
+        >
+            {badge}
+        </div>
+        <div id="card_date_box" role="heading"
+                class={
+                    css({
+                        display: 'flex',
+                        width: 'fit-content',
+                        margin: '0px 0px 10px 15px',
+                        fontFamily: 'figtree_variable',
+                        fontSize: '13px',
+                    })
+                }
+        >
+            Published {date}
+        </div>
+
+</div>
